@@ -1,0 +1,14 @@
+<%= form_with(model: [company, claim]) do |f| %>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content, class:'form-control' %>
+  </div>
+  <%= f.submit "Enviar", class:'btn btn-primary btn-sm' %>
+<% end %>
+
+
+<ul id="company_claims_list">
+    <% company.claims.each do |c| %>
+    <li><%= c.content%></li>
+    <% end  %>
+</ul>

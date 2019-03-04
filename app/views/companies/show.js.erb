@@ -1,0 +1,2 @@
+$('.modal-body').html("<h4><%= @company.name %></h4> <%= j render 'claim_form', company: @company, claim: Claim.new %>")
+$('.modal').modal('show')
